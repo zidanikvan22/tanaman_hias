@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ListBarangController;
 use App\Http\Controllers\ListBarangfController;
 use Illuminate\Support\Facades\Route;
@@ -61,3 +62,5 @@ Route::prefix('admin')->group(function () {
 Route::get('/listbarang/{id}/{nama}', [ListBarangController::class, 'tampilkan']);
 
 Route::get('/list_barangf', [ListBarangfController::class, 'tampilkan']);
+
+Route::get("/", [HomeController::class, "index"]);
